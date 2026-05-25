@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Before n Beyond Staging Calgary</title>
+  <meta name="description" content="Browse our portfolio of professionally staged Calgary homes. See stunning before and after transformations by Before n Beyond Staging." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/portfolio.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <span class="nav-logo-main">Before n Beyond</span>
+        <span class="nav-logo-sub">Calgary Home Staging</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/portfolio" class="active">Portfolio</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="mailto:beforenbeyondstaging@gmail.com" class="nav-phone">beforenbeyondstaging@gmail.com</a>
+        <a href="/contact" class="nav-btn">Book a Consult</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="nav-mobile" id="navMobile">
+    <a href="/" onclick="closeMobileNav()">Home</a>
+    <a href="/services" onclick="closeMobileNav()">Services</a>
+    <a href="/portfolio" onclick="closeMobileNav()">Portfolio</a>
+    <a href="/contact" onclick="closeMobileNav()">Contact</a>
+    <a href="/contact" class="btn btn-gold" style="margin-top:16px;">Book a Consult</a>
+  </div>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="page-hero-content container">
+      <span class="label">Our Work</span>
+      <h1>Portfolio</h1>
+    </div>
+  </div>
+
+  <!-- Filter Bar -->
+  <section class="filter-section">
+    <div class="container">
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="living">Living Room</button>
+        <button class="filter-btn" data-filter="kitchen">Kitchen</button>
+        <button class="filter-btn" data-filter="bedroom">Bedroom</button>
+        <button class="filter-btn" data-filter="dining">Dining</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Grid -->
+  <section class="gallery-section section">
+    <div class="container-wide">
+      <div class="gallery-grid" id="galleryGrid">
+
+        <div class="gallery-item reveal" data-category="living">
+          <div class="gallery-img-wrap">
+            <img src="images/hero_staging.jpg" alt="Living room staging Calgary" loading="lazy" />
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <span class="gallery-tag">Living Room</span>
+                <h4>McKenzie Lake Residence</h4>
+                <p>Calgary, AB</p>
+              </div>
+              <button class="gallery-zoom" data-img="images/hero_staging.jpg" data-title="McKenzie Lake Residence"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal reveal-delay-1" data-category="kitchen">
+          <div class="gallery-img-wrap">
+            <img src="images/staging_kitchen.jpg" alt="Kitchen staging Calgary" loading="lazy" />
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <span class="gallery-tag">Kitchen</span>
+                <h4>Aspen Hills Home</h4>
+                <p>Calgary, AB</p>
+              </div>
+              <button class="gallery-zoom" data-img="images/staging_kitchen.jpg" data-title="Aspen Hills Kitchen"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-item-tall reveal reveal-delay-2" data-category="bedroom">
+          <div class="gallery-img-wrap">
+            <img src="images/staging_bedroom.jpg" alt="Bedroom staging Calgary" loading="lazy" />
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <span class="gallery-tag">Bedroom</span>
+                <h4>Tuscany Estate</h4>
+                <p>Calgary, AB</p>
+              </div>
+              <button class="gallery-zoom" data-img="images/staging_bedroom.jpg" data-title="Tuscany Bedroom"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal reveal-delay-3" data-category="dining">
+          <div class="gallery-img-wrap">
+            <img src="images/staging_dining.jpg" alt="Dining room staging Calgary" loading="lazy" />
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <span class="gallery-tag">Dining Room</span>
+                <h4>Springbank Hill Property</h4>
+                <p>Calgary, AB</p>
+              </div>
+              <button class="gallery-zoom" data-img="images/staging_dining.jpg" data-title="Springbank Dining Room"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal" data-category="living">
+          <div class="gallery-img-wrap">
+            <img src="images/hero_staging.jpg" alt="Living room staging" loading="lazy" />
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <span class="gallery-tag">Living Room</span>
+                <h4>Altadore Townhome</h4>
+                <p>Calgary, AB</p>
+              </div>
+              <button class="gallery-zoom" data-img="images/hero_staging.jpg" data-title="Altadore Living Room"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-item-wide reveal reveal-delay-1" data-category="kitchen">
+          <div class="gallery-img-wrap">
+            <img src="images/staging_kitchen.jpg" alt="Kitchen staging" loading="lazy" />
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <span class="gallery-tag">Kitchen</span>
+                <h4>Bridgeland Condo</h4>
+                <p>Calgary, AB</p>
+              </div>
+              <button class="gallery-zoom" data-img="images/staging_kitchen.jpg" data-title="Bridgeland Kitchen"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal reveal-delay-2" data-category="bedroom">
+          <div class="gallery-img-wrap">
+            <img src="images/staging_bedroom.jpg" alt="Bedroom staging" loading="lazy" />
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <span class="gallery-tag">Bedroom</span>
+                <h4>Mahogany Lakeside</h4>
+                <p>Calgary, AB</p>
+              </div>
+              <button class="gallery-zoom" data-img="images/staging_bedroom.jpg" data-title="Mahogany Bedroom"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal reveal-delay-3" data-category="dining">
+          <div class="gallery-img-wrap">
+            <img src="images/staging_dining.jpg" alt="Dining room staging" loading="lazy" />
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <span class="gallery-tag">Dining Room</span>
+                <h4>Signal Hill Home</h4>
+                <p>Calgary, AB</p>
+              </div>
+              <button class="gallery-zoom" data-img="images/staging_dining.jpg" data-title="Signal Hill Dining"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Before/After Showcase -->
+  <section class="section ba-showcase" style="background: var(--ivory);">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="label">The Transformation</span>
+        <h2 class="section-title">Before & After</h2>
+        <div class="divider"></div>
+        <p class="section-subtitle">Drag the slider to reveal the dramatic difference professional staging makes.</p>
+      </div>
+      <div class="ba-slider-wrapper reveal">
+        <div class="ba-slider" id="baSlider">
+          <div class="ba-before">
+            <img src="images/staging_dining.jpg" alt="Before staging" />
+            <span class="ba-label">Before</span>
+          </div>
+          <div class="ba-after">
+            <img src="images/hero_staging.jpg" alt="After staging" />
+            <span class="ba-label ba-label-right">After</span>
+          </div>
+          <div class="ba-handle" id="baHandle">
+            <div class="ba-handle-circle"><i class="fa-solid fa-arrows-left-right"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="section-sm results-section" style="background: var(--charcoal);">
+    <div class="container">
+      <div class="results-grid">
+        <div class="result-item reveal"><span class="stat-num" data-target="120">0</span><span class="stat-plus">+</span><p>Projects Completed</p></div>
+        <div class="result-item reveal reveal-delay-1"><span class="stat-num" data-target="15">0</span><span class="stat-plus">k+</span><p>Avg. Over Asking</p></div>
+        <div class="result-item reveal reveal-delay-2"><span class="stat-num" data-target="8">0</span><span class="stat-plus">Days</span><p>Avg. Time to Sell</p></div>
+        <div class="result-item reveal reveal-delay-3"><span class="stat-num" data-target="98">0</span><span class="stat-plus">%</span><p>Client Satisfaction</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="cta-bg">
+      <img src="images/staging_bedroom.jpg" alt="Staged home" />
+      <div class="cta-overlay"></div>
+    </div>
+    <div class="container cta-content reveal">
+      <span class="label" style="color:var(--gold-light);">Your Home, Next</span>
+      <h2 style="color:var(--white);">Let's Create Something<br/><em>Beautiful Together</em></h2>
+      <p style="color:rgba(255,255,255,0.8); max-width:500px; margin:20px auto 40px;">Ready to see what we can do for your property? Book a free consultation today.</p>
+      <a href="/contact" class="btn btn-gold">Book Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- Image Lightbox Modal -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-overlay" id="lightboxOverlay"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose"><i class="fa-solid fa-xmark"></i></button>
+      <img src="" alt="" id="lightboxImg" />
+      <p id="lightboxTitle"></p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <span class="nav-logo-main">Before n Beyond</span>
+            <span class="nav-logo-sub">Calgary Home Staging</span>
+          </div>
+          <p class="footer-desc">Transforming spaces from Before to Beyond. Calgary's trusted home staging and pre-listing prep specialists.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/beforenbeyondstaging/" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:beforenbeyondstaging@gmail.com" class="social-icon"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Navigate</h4>
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li><li><a href="/services">Services</a></li>
+            <li><a href="/portfolio">Portfolio</a></li><li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col"><h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="/services">Home Staging</a></li><li><a href="/services">Pre-Listing Prep</a></li>
+            <li><a href="/services">Interior Styling</a></li>
+          </ul>
+        </div>
+        <div class="footer-col"><h4>Contact</h4>
+          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>Calgary, Alberta, Canada</span></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>beforenbeyondstaging@gmail.com</span></div>
+          <div class="footer-contact-item"><i class="fa-brands fa-instagram"></i><span>@beforenbeyondstaging</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Before n Beyond Staging. All rights reserved.</p>
+        <p>Made with <i class="fa-solid fa-heart" style="color:var(--gold);"></i> in Calgary</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/portfolio.js"></script>
+</body>
+</html>

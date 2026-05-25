@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Before n Beyond Staging Calgary</title>
+  <meta name="description" content="Book a free home staging consultation in Calgary. Contact Before n Beyond Staging today — we'd love to help sell your home faster and for more." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <span class="nav-logo-main">Before n Beyond</span>
+        <span class="nav-logo-sub">Calgary Home Staging</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/portfolio">Portfolio</a></li>
+        <li><a href="/contact" class="active">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="mailto:beforenbeyondstaging@gmail.com" class="nav-phone">beforenbeyondstaging@gmail.com</a>
+        <a href="/contact" class="nav-btn">Book a Consult</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="nav-mobile" id="navMobile">
+    <a href="/" onclick="closeMobileNav()">Home</a>
+    <a href="/services" onclick="closeMobileNav()">Services</a>
+    <a href="/portfolio" onclick="closeMobileNav()">Portfolio</a>
+    <a href="/contact" onclick="closeMobileNav()">Contact</a>
+    <a href="/contact" class="btn btn-gold" style="margin-top:16px;">Book a Consult</a>
+  </div>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="page-hero-content container">
+      <span class="label">Get In Touch</span>
+      <h1>Contact Us</h1>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <section class="section contact-section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Left: Info -->
+        <div class="contact-info reveal-left">
+          <span class="label">Let's Connect</span>
+          <h2>Book Your Free<br /><em>Consultation</em></h2>
+          <div class="divider" style="margin: 24px 0;"></div>
+          <p>Ready to transform your home for the market? We'd love to learn more about your property and discuss how staging can help you sell faster and for more.</p>
+          <p style="margin-top:16px;">Fill out the form or reach out directly — we respond within 24 hours.</p>
+
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <strong>Email Us</strong>
+                <a href="mailto:beforenbeyondstaging@gmail.com">beforenbeyondstaging@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <strong>Location</strong>
+                <span>Calgary, Alberta, Canada</span>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon"><i class="fa-brands fa-instagram"></i></div>
+              <div>
+                <strong>Instagram</strong>
+                <a href="https://www.instagram.com/beforenbeyondstaging/" target="_blank">@beforenbeyondstaging</a>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <strong>Response Time</strong>
+                <span>Within 24 hours</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map -->
+          <div class="map-embed">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d160894.97547063476!2d-114.23084!3d51.04475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537170039f843fd5%3A0x266d3bb1b652b63a!2sCalgary%2C%20AB%2C%20Canada!5e0!3m2!1sen!2sus!4v1699999999999!5m2!1sen!2sus"
+              width="100%"
+              height="220"
+              style="border:0; border-radius: 8px;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Calgary, Alberta map">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="contact-form-wrap reveal-right">
+          <div class="contact-form-card">
+            <h3>Send Us a Message</h3>
+            <p style="font-size:0.9rem; margin-bottom:32px;">Tell us about your property and we'll get back to you with a custom plan.</p>
+
+            <form id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Full Name <span class="required">*</span></label>
+                  <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+                  <span class="field-error" id="nameError"></span>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address <span class="required">*</span></label>
+                  <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+                  <span class="field-error" id="emailError"></span>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="(403) 555-0100" />
+                </div>
+                <div class="form-group">
+                  <label for="propertyType">Property Type</label>
+                  <select id="propertyType" name="propertyType">
+                    <option value="">Select type...</option>
+                    <option value="house">Single Family Home</option>
+                    <option value="condo">Condo / Apartment</option>
+                    <option value="townhouse">Townhouse</option>
+                    <option value="luxury">Luxury Property</option>
+                    <option value="vacant">Vacant Property</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="service">Service Interested In</label>
+                <select id="service" name="service">
+                  <option value="">Select service...</option>
+                  <option value="home-staging">Home Staging</option>
+                  <option value="pre-listing">Pre-Listing Prep</option>
+                  <option value="interior-styling">Interior Styling</option>
+                  <option value="consultation">Free Consultation</option>
+                  <option value="unsure">Not Sure Yet</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Message <span class="required">*</span></label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell us about your property, timeline, and any specific needs..." required></textarea>
+                <span class="field-error" id="messageError"></span>
+              </div>
+
+              <button type="submit" class="btn btn-gold form-submit" id="submitBtn">
+                <span id="submitText">Send Message</span>
+                <span id="submitSpinner" style="display:none;"><i class="fa-solid fa-spinner fa-spin"></i></span>
+                <i class="fa-solid fa-paper-plane" id="submitIcon"></i>
+              </button>
+            </form>
+
+            <!-- Success State -->
+            <div class="form-success" id="formSuccess" style="display:none;">
+              <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+              <h4>Message Sent!</h4>
+              <p>Thank you for reaching out! We'll get back to you within 24 hours with your personalized staging plan.</p>
+              <a href="/" class="btn btn-outline-dark" style="margin-top:20px;">Back to Home</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section why-section" style="background: var(--ivory);">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="label">Why Work With Us</span>
+        <h2 class="section-title">The Before n Beyond<br/><em>Difference</em></h2>
+        <div class="divider"></div>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal reveal-delay-1">
+          <div class="why-icon"><i class="fa-solid fa-medal"></i></div>
+          <h4>Calgary Experts</h4>
+          <p>Deep knowledge of the Calgary market means we stage for the right buyer demographic in every neighbourhood.</p>
+        </div>
+        <div class="why-card reveal reveal-delay-2">
+          <div class="why-icon"><i class="fa-solid fa-bolt"></i></div>
+          <h4>Fast Turnaround</h4>
+          <p>We work quickly without compromising quality. Most staging installs complete in a single day.</p>
+        </div>
+        <div class="why-card reveal reveal-delay-3">
+          <div class="why-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+          <h4>Personal Service</h4>
+          <p>Every client receives personalized attention and a custom staging plan tailored to their unique property.</p>
+        </div>
+        <div class="why-card reveal reveal-delay-4">
+          <div class="why-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h4>Proven Results</h4>
+          <p>Our staged homes consistently sell faster and closer to (or over) asking price compared to unstaged properties.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <span class="nav-logo-main">Before n Beyond</span>
+            <span class="nav-logo-sub">Calgary Home Staging</span>
+          </div>
+          <p class="footer-desc">Transforming spaces from Before to Beyond. Calgary's trusted home staging and pre-listing prep specialists.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/beforenbeyondstaging/" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:beforenbeyondstaging@gmail.com" class="social-icon"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Navigate</h4>
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li><li><a href="/services">Services</a></li>
+            <li><a href="/portfolio">Portfolio</a></li><li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col"><h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="/services">Home Staging</a></li><li><a href="/services">Pre-Listing Prep</a></li>
+            <li><a href="/services">Interior Styling</a></li>
+          </ul>
+        </div>
+        <div class="footer-col"><h4>Contact</h4>
+          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>Calgary, Alberta, Canada</span></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>beforenbeyondstaging@gmail.com</span></div>
+          <div class="footer-contact-item"><i class="fa-brands fa-instagram"></i><span>@beforenbeyondstaging</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Before n Beyond Staging. All rights reserved.</p>
+        <p>Made with <i class="fa-solid fa-heart" style="color:var(--gold);"></i> in Calgary</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
