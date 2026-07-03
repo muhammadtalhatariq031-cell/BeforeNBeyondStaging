@@ -2,6 +2,53 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const fs = require('fs');
+const nodemailer = require('nodemailer');
+
+// ---- Fix image filenames on startup ----
+const imgDir = path.join(__dirname, 'public', 'images');
+const imgMappings = [
+  { match: 'Occupied Home Staging', ext: '.jpg', newName: 'occupied_staging.jpg' },
+  { match: 'Clean, calm, and buyer-ready', ext: '.jpg', newName: 'calm_bedroom.jpg' },
+  { match: 'luxury builder  (1)', ext: '.jpg', newName: 'entryway_2.jpg' },
+  { match: 'luxury builder ', ext: '.jpg', newName: 'entryway_1.jpg' },
+  { match: 'bright, inviting', ext: '.jpg', newName: 'bright_living.jpg' },
+  { match: 'Warm and welcoming', ext: '.jpg', newName: 'warm_welcoming.jpg' },
+  { match: 'four walls', ext: '.jpg', newName: 'inspiring_1.jpg' },
+  { match: 'Calm. Clean. Minimal', ext: '.jpg', newName: 'minimal_dining.jpg' },
+];
+
+try {
+  const allFiles = fs.readdirSync(imgDir);
+  const jpgFiles = allFiles.filter(f => f.endsWith('.jpg') && f.length > 30);
+  console.log(`Found ${jpgFiles.length} jpg files with long names to process...`);
+
+  for (const file of jpgFiles) {
+    for (const m of imgMappings) {
+      if (file.includes(m.match) && file.endsWith(m.ext)) {
+        // Handle the (1) variant for inspiring
+        if (file.includes('(1)') && m.match === 'four walls') {
+          const dest = path.join(imgDir, 'inspiring_2.jpg');
+          if (!fs.existsSync(dest)) {
+            fs.copyFileSync(path.join(imgDir, file), dest);
+            console.log(`  Copied -> inspiring_2.jpg`);
+          }
+        } else {
+          const dest = path.join(imgDir, m.newName);
+          if (!fs.existsSync(dest)) {
+            fs.copyFileSync(path.join(imgDir, file), dest);
+            console.log(`  Copied -> ${m.newName}`);
+          }
+        }
+        break;
+      }
+    }
+  }
+  console.log('Image fix complete.');
+} catch (e) {
+  console.log('Image fix skipped:', e.message);
+}
+// ---- End image fix ----
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -51,14 +98,38 @@ app.post('/api/contact', async (req, res) => {
       });
     }
 
-    // Log inquiry (in production, this would send an email via Nodemailer)
-    console.log('\n📩 New Contact Inquiry:');
-    console.log(`   Name: ${name}`);
-    console.log(`   Email: ${email}`);
-    console.log(`   Phone: ${phone || 'Not provided'}`);
-    console.log(`   Property Type: ${propertyType || 'Not specified'}`);
-    console.log(`   Message: ${message}`);
-    console.log(`   Time: ${new Date().toLocaleString()}\n`);
+    // Send email using Nodemailer
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
+      }
+    });
+
+    const mailOptions = {
+      from: `"${name}" <${email}>`, // sender address (could also be your own)
+      replyTo: email,
+      to: process.env.EMAIL_USER, // receiver address (your email)
+      subject: `New Lead: Staging Inquiry from ${name}`,
+      text: `
+      New Contact Inquiry from Before n Beyond Website:
+
+      Name: ${name}
+      Email: ${email}
+      Phone: ${phone || 'Not provided'}
+      Property Type: ${propertyType || 'Not specified'}
+      
+      Message:
+      ${message}
+      `
+    };
+
+    if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
+      await transporter.sendMail(mailOptions);
+    } else {
+      console.log('Email not sent because EMAIL_USER and EMAIL_PASS are not configured in .env file.');
+    }
 
     // Success response
     res.status(200).json({

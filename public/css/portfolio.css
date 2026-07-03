@@ -89,6 +89,11 @@
 .gallery-item:hover .gallery-overlay { opacity: 1; }
 .gallery-item:hover .gallery-img-wrap img { transform: scale(1.08); }
 
+/* Hide overlay for bedroom items so images display without dark overlay */
+.gallery-item[data-category="bedroom"] .gallery-overlay {
+  display: none !important;
+}
+
 .gallery-info { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; }
 
 .gallery-tag {

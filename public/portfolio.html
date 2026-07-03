@@ -15,8 +15,7 @@
   <nav class="navbar scrolled" id="navbar">
     <div class="nav-inner">
       <a href="/" class="nav-logo">
-        <span class="nav-logo-main">Before n Beyond</span>
-        <span class="nav-logo-sub">Calgary Home Staging</span>
+        <img src="images/logo.png" alt="Before n Beyond Staging" class="nav-logo-img" />
       </a>
       <ul class="nav-links">
         <li><a href="/">Home</a></li>
@@ -43,14 +42,6 @@
     <a href="/contact" class="btn btn-gold" style="margin-top:16px;">Book a Consult</a>
   </div>
 
-  <!-- Page Hero -->
-  <div class="page-hero">
-    <div class="page-hero-content container">
-      <span class="label">Our Work</span>
-      <h1>Portfolio</h1>
-    </div>
-  </div>
-
   <!-- Filter Bar -->
   <section class="filter-section">
     <div class="container">
@@ -60,6 +51,8 @@
         <button class="filter-btn" data-filter="kitchen">Kitchen</button>
         <button class="filter-btn" data-filter="bedroom">Bedroom</button>
         <button class="filter-btn" data-filter="dining">Dining</button>
+        <button class="filter-btn" data-filter="entryway">Entryway</button>
+        <button class="filter-btn" data-filter="other">All Designs</button>
       </div>
     </div>
   </section>
@@ -97,19 +90,7 @@
           </div>
         </div>
 
-        <div class="gallery-item gallery-item-tall reveal reveal-delay-2" data-category="bedroom">
-          <div class="gallery-img-wrap">
-            <img src="images/staging_bedroom.jpg" alt="Bedroom staging Calgary" loading="lazy" />
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <span class="gallery-tag">Bedroom</span>
-                <h4>Tuscany Estate</h4>
-                <p>Calgary, AB</p>
-              </div>
-              <button class="gallery-zoom" data-img="images/staging_bedroom.jpg" data-title="Tuscany Bedroom"><i class="fa-solid fa-expand"></i></button>
-            </div>
-          </div>
-        </div>
+        <!-- Removed: staging_bedroom.jpg gallery item per request -->
 
         <div class="gallery-item reveal reveal-delay-3" data-category="dining">
           <div class="gallery-img-wrap">
@@ -125,61 +106,191 @@
           </div>
         </div>
 
-        <div class="gallery-item reveal" data-category="living">
+        <div class="gallery-item reveal reveal-delay-2" data-category="kitchen">
           <div class="gallery-img-wrap">
-            <img src="images/hero_staging.jpg" alt="Living room staging" loading="lazy" />
+            <img src="images/kitchen_modern_island.png" alt="Modern kitchen island staging" loading="lazy" />
             <div class="gallery-overlay">
               <div class="gallery-info">
-                <span class="gallery-tag">Living Room</span>
-                <h4>Altadore Townhome</h4>
+                <span class="gallery-tag">Kitchen</span>
+                <h4>Modern Kitchen Island</h4>
                 <p>Calgary, AB</p>
               </div>
-              <button class="gallery-zoom" data-img="images/hero_staging.jpg" data-title="Altadore Living Room"><i class="fa-solid fa-expand"></i></button>
+              <button class="gallery-zoom" data-img="images/kitchen_modern_island.png" data-title="Modern Kitchen Island"><i class="fa-solid fa-expand"></i></button>
             </div>
           </div>
         </div>
 
-        <div class="gallery-item gallery-item-wide reveal reveal-delay-1" data-category="kitchen">
+        <div class="gallery-item reveal" data-category="dining">
           <div class="gallery-img-wrap">
-            <img src="images/staging_kitchen.jpg" alt="Kitchen staging" loading="lazy" />
+            <img src="images/dining_extra_1.jpg" alt="Elegant dining room staging" loading="lazy" />
             <div class="gallery-overlay">
               <div class="gallery-info">
-                <span class="gallery-tag">Kitchen</span>
-                <h4>Bridgeland Condo</h4>
+                <span class="gallery-tag">Dining Room</span>
+                <h4>Elegant Dining Setup</h4>
                 <p>Calgary, AB</p>
               </div>
-              <button class="gallery-zoom" data-img="images/staging_kitchen.jpg" data-title="Bridgeland Kitchen"><i class="fa-solid fa-expand"></i></button>
+              <button class="gallery-zoom" data-img="images/dining_extra_1.jpg" data-title="Elegant Dining Setup"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal reveal-delay-1" data-category="dining">
+          <div class="gallery-img-wrap">
+            <img src="images/dining_extra_2.jpg" alt="Minimalist dining room staging" loading="lazy" />
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <span class="gallery-tag">Dining Room</span>
+                <h4>Minimalist Dining Area</h4>
+                <p>Calgary, AB</p>
+              </div>
+              <button class="gallery-zoom" data-img="images/dining_extra_2.jpg" data-title="Minimalist Dining Area"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal" data-category="living">
+          <div class="gallery-img-wrap">
+            <img src="images/bright_living.jpg" alt="Bright inviting living room" loading="lazy" />
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <span class="gallery-tag">Living Room</span>
+                <h4>Modern Living Transformation</h4>
+                <p>Calgary, AB</p>
+              </div>
+              <button class="gallery-zoom" data-img="images/bright_living.jpg" data-title="Modern Living Transformation"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal reveal-delay-2" data-category="living">
+          <div class="gallery-img-wrap">
+            <img src="images/staged_living_new.png" alt="Elegant staged living room" loading="lazy" />
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <span class="gallery-tag">Living Room</span>
+                <h4>Elegant Living Staging</h4>
+                <p>Calgary, AB</p>
+              </div>
+              <button class="gallery-zoom" data-img="images/staged_living_new.png" data-title="Elegant Living Staging"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal reveal-delay-3" data-category="bedroom">
+          <div class="gallery-img-wrap">
+            <img src="images/bedroom_filler.png" alt="Cozy master bedroom staging" loading="lazy" />
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <span class="gallery-tag">Bedroom</span>
+                <h4>Cozy Master Suite</h4>
+                <p>Calgary, AB</p>
+              </div>
+              <button class="gallery-zoom" data-img="images/bedroom_filler.png" data-title="Cozy Master Suite"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-item-wide reveal reveal-delay-1" data-category="living">
+          <div class="gallery-img-wrap">
+            <img src="images/warm_welcoming.jpg" alt="Warm and welcoming staging" loading="lazy" />
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <span class="gallery-tag">Living Room</span>
+                <h4>Warm & Welcoming Space</h4>
+                <p>Calgary, AB</p>
+              </div>
+              <button class="gallery-zoom" data-img="images/warm_welcoming.jpg" data-title="Warm & Welcoming Space"><i class="fa-solid fa-expand"></i></button>
             </div>
           </div>
         </div>
 
         <div class="gallery-item reveal reveal-delay-2" data-category="bedroom">
           <div class="gallery-img-wrap">
-            <img src="images/staging_bedroom.jpg" alt="Bedroom staging" loading="lazy" />
+            <img src="images/calm_bedroom.jpg" alt="Calm bedroom staging" loading="lazy" />
             <div class="gallery-overlay">
               <div class="gallery-info">
                 <span class="gallery-tag">Bedroom</span>
-                <h4>Mahogany Lakeside</h4>
+                <h4>Serene Master Suite</h4>
                 <p>Calgary, AB</p>
               </div>
-              <button class="gallery-zoom" data-img="images/staging_bedroom.jpg" data-title="Mahogany Bedroom"><i class="fa-solid fa-expand"></i></button>
+              <button class="gallery-zoom" data-img="images/calm_bedroom.jpg" data-title="Serene Master Suite"><i class="fa-solid fa-expand"></i></button>
             </div>
           </div>
         </div>
 
-        <div class="gallery-item reveal reveal-delay-3" data-category="dining">
+        <!-- Removed miscategorized dining gallery item that showed a bedroom image -->
+
+        <div class="gallery-item gallery-item-tall reveal" data-category="entryway">
           <div class="gallery-img-wrap">
-            <img src="images/staging_dining.jpg" alt="Dining room staging" loading="lazy" />
+            <img src="images/entryway_1.jpg" alt="Luxury entryway staging" loading="lazy" />
             <div class="gallery-overlay">
               <div class="gallery-info">
-                <span class="gallery-tag">Dining Room</span>
-                <h4>Signal Hill Home</h4>
+                <span class="gallery-tag">Entryway</span>
+                <h4>Luxury Entry Foyer</h4>
                 <p>Calgary, AB</p>
               </div>
-              <button class="gallery-zoom" data-img="images/staging_dining.jpg" data-title="Signal Hill Dining"><i class="fa-solid fa-expand"></i></button>
+              <button class="gallery-zoom" data-img="images/entryway_1.jpg" data-title="Luxury Entry Foyer"><i class="fa-solid fa-expand"></i></button>
             </div>
           </div>
         </div>
+
+        <div class="gallery-item reveal reveal-delay-1" data-category="entryway">
+          <div class="gallery-img-wrap">
+            <img src="images/entryway_2.jpg" alt="Elegant entryway staging" loading="lazy" />
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <span class="gallery-tag">Entryway</span>
+                <h4>Elegant Entryway</h4>
+                <p>Calgary, AB</p>
+              </div>
+              <button class="gallery-zoom" data-img="images/entryway_2.jpg" data-title="Elegant Entryway"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal reveal-delay-2" data-category="living">
+          <div class="gallery-img-wrap">
+            <img src="images/inspiring_1.jpg" alt="Inspiring living room" loading="lazy" />
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <span class="gallery-tag">Living Room</span>
+                <h4>Inspiring Living Room</h4>
+                <p>Calgary, AB</p>
+              </div>
+              <button class="gallery-zoom" data-img="images/inspiring_1.jpg" data-title="Inspiring Living Room"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal reveal-delay-3" data-category="living">
+          <div class="gallery-img-wrap">
+            <img src="images/inspiring_2.jpg" alt="Dream living room" loading="lazy" />
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <span class="gallery-tag">Living Room</span>
+                <h4>Dream Living Room</h4>
+                <p>Calgary, AB</p>
+              </div>
+              <button class="gallery-zoom" data-img="images/inspiring_2.jpg" data-title="Dream Living Room"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal" data-category="living">
+          <div class="gallery-img-wrap">
+            <img src="images/occupied_staging.jpg" alt="Occupied home staging" loading="lazy" />
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <span class="gallery-tag">Living Room</span>
+                <h4>Occupied Home Staging</h4>
+                <p>Calgary, AB</p>
+              </div>
+              <button class="gallery-zoom" data-img="images/occupied_staging.jpg" data-title="Occupied Home Staging"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+        </div>
+
+
 
       </div>
     </div>
@@ -197,11 +308,11 @@
       <div class="ba-slider-wrapper reveal">
         <div class="ba-slider" id="baSlider">
           <div class="ba-before">
-            <img src="images/staging_dining.jpg" alt="Before staging" />
+            <img src="images/before_empty.png" alt="Before staging - empty room" />
             <span class="ba-label">Before</span>
           </div>
           <div class="ba-after">
-            <img src="images/hero_staging.jpg" alt="After staging" />
+            <img src="images/after_staged.png" alt="After staging - beautifully furnished" />
             <span class="ba-label ba-label-right">After</span>
           </div>
           <div class="ba-handle" id="baHandle">
@@ -227,7 +338,7 @@
   <!-- CTA -->
   <section class="cta-banner">
     <div class="cta-bg">
-      <img src="images/staging_bedroom.jpg" alt="Staged home" />
+      <img src="images/calm_bedroom.jpg" alt="Staged home" />
       <div class="cta-overlay"></div>
     </div>
     <div class="container cta-content reveal">
@@ -254,8 +365,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="nav-logo">
-            <span class="nav-logo-main">Before n Beyond</span>
-            <span class="nav-logo-sub">Calgary Home Staging</span>
+            <img src="images/logo.png" alt="Before n Beyond Staging" class="nav-logo-img" />
           </div>
           <p class="footer-desc">Transforming spaces from Before to Beyond. Calgary's trusted home staging and pre-listing prep specialists.</p>
           <div class="footer-socials">
@@ -272,10 +382,11 @@
         <div class="footer-col"><h4>Services</h4>
           <ul class="footer-links">
             <li><a href="/services">Home Staging</a></li><li><a href="/services">Pre-Listing Prep</a></li>
-            <li><a href="/services">Interior Styling</a></li>
+            <li><a href="/services">Short-Term Rentals</a></li>
           </ul>
         </div>
         <div class="footer-col"><h4>Contact</h4>
+          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>Sarv: 647-780-1923<br>Parv: 647-267-1583</span></div>
           <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>Calgary, Alberta, Canada</span></div>
           <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>beforenbeyondstaging@gmail.com</span></div>
           <div class="footer-contact-item"><i class="fa-brands fa-instagram"></i><span>@beforenbeyondstaging</span></div>

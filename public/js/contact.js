@@ -76,6 +76,9 @@ contactForm?.addEventListener('submit', async (e) => {
 
   try {
     const payload = {
+      access_key: "d4aa3e61-20bb-4d65-964f-c84352ce50d5",
+      subject: "New Lead from Before n Beyond Website",
+      from_name: "Before n Beyond Website",
       name: document.getElementById('name').value.trim(),
       email: document.getElementById('email').value.trim(),
       phone: document.getElementById('phone').value.trim(),
@@ -84,19 +87,22 @@ contactForm?.addEventListener('submit', async (e) => {
       message: document.getElementById('message').value.trim()
     };
 
-    const response = await fetch('/api/contact', {
+    const response = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
       body: JSON.stringify(payload)
     });
 
     const data = await response.json();
 
-    if (data.success) {
+    if (response.status === 200) {
       contactForm.style.display = 'none';
       formSuccess.style.display = 'block';
     } else {
-      throw new Error(data.message);
+      throw new Error(data.message || 'Submission failed');
     }
   } catch (err) {
     submitText.textContent = 'Send Message';
